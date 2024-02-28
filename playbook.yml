@@ -1,8 +1,8 @@
 ---
-- name:Run application in container
-  hosts :servers
-  become:yes
-  gather_facts:no
+- name: Run application in container
+  hosts : servers
+  become :yes
+  gather_facts: no
   tasks:
     - name: create docker container
-      shell: docker run -p 8888:8081 --name auk2000/hellosprintboot
+      shell: docker run -p 8888:8081 --name MyHello auk2000/hellosprintboot
